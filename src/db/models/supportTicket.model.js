@@ -10,7 +10,7 @@ const supportTicketSchema = new Schema({
       required: true,
    },
    dateCreated: {
-      type: Date,
+      type: String,
       default: Date.now,
    },
    severity: {
@@ -32,7 +32,7 @@ const supportTicketSchema = new Schema({
       default: "New",
    },
    resolvedOn: {
-      type: Date,
+      type: String,
    },
 }, {timestamps: true});
 

@@ -41,7 +41,7 @@ export const createSupportAgent = async(req, res, next) => {
       res.status(200).json({
         message: "New agent created",
         success: true,
-        savedAgent
+        data: savedAgent
       })
    } catch (error) {
       next(error);
@@ -55,7 +55,7 @@ export const getSupportAgentList = async (_req, res, next) => {
             res.status(200).json({
                 message: 'Success',
                 success: true,
-                agents
+                data: agents
             })
             return;
         }

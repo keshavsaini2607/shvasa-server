@@ -2,6 +2,7 @@ import * as dotenv from "dotenv";
 import express from "express";
 import { connectDB } from "./db/index.js";
 import supportAgentRoutes from "./routes/supportAgent.route.js";
+import supportTicketRoutes from "./routes/supportTicket.route.js";
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ connectDB();
 
 //api routes
 app.use("/api/supportAgent", supportAgentRoutes);
+app.use("/api/supportTicket", supportTicketRoutes);
 
 const PORT = process.env.PORT;
 
